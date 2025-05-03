@@ -1,0 +1,42 @@
+<div  >
+  @for(item of games; track $index){
+    <a [routerLink]="['/gameDetails',item.game.id]">
+      <div   class="cardMobile">
+          <div class="flex name">
+            <p>{{item.game.away.probable_pitcher.full_name}}</p>
+
+            <img src="{{ item.awayLogo }}" alt="{{ item.awayName }}" />
+          </div>
+          <div class="flex">
+            <span   class="text">
+              16:40
+            </span>
+          </div>
+          <div class="flex name">
+            <img src="{{ item.homeLogo }}" alt="{{ item.homeName }}" />
+            <p>{{item.game.home.probable_pitcher.full_name}}</p>
+          </div>
+      </div>
+    </a>
+  }
+  <a [routerLink]="['/gameDetails',0]">
+  <div   class="cardMobile">
+    <div class="flex" >
+      <p>Cristopher Sánchez</p>
+      <img
+
+        src="https://lexfitcode.github.io/dummieweb/logos%20mlb/Cardinals.png"
+        alt="Cardinals"
+      /><span   class="text"
+        >16:40</span
+      ><img
+
+        src="https://lexfitcode.github.io/dummieweb/logos%20mlb/Reds.png"
+        alt="Reds"
+      />
+      <p>Cristopher Sánchez</p>
+    </div>
+  </div>
+</a>
+
+</div>
